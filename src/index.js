@@ -1,10 +1,8 @@
-const { reverse } = require("ramda");
+const { reverse, mathMod } = require("ramda");
 
 module.exports = function reverse (n) {
-    let newString = '';
-
-  for (let i = n.length - 1; i >= 0; i--) {
-    newString += n[i];
-  }
-  return Number(newString);
+    let number = Math.abs(n)
+    let result = number.toString().split("").reverse().join("");
+    return result;
 }
+
